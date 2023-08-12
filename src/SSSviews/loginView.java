@@ -37,6 +37,7 @@ public class loginView extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Log In");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("Log in");
@@ -124,17 +125,16 @@ public class loginView extends javax.swing.JFrame {
         String systemPassword = new String(password);
 
         // Main function of the button
-        if(jTextField1.getText().equals("") && systemPassword.equals("")){
-            // Close out the pane
+        if(jTextField1.getText().equals("Gato") && systemPassword.equals("Gatito")){
+            // Closes out the panel
             this.dispose();
 
-            // Welcome message
+            // Shows the Welcome message
             JOptionPane.showMessageDialog(null, "Welcome to our Sales System", "Welcome Message", JOptionPane.INFORMATION_MESSAGE);
 
-            // Opens main page
+            // Opens main page in max screen
             mainPageView mP = new mainPageView();
             mP.setExtendedState(JFrame.MAXIMIZED_BOTH);
-            mP.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             mP.setVisible(true);
         }
         else{
